@@ -44,11 +44,15 @@
 	 * Searches the DOM for [data-include-fragment] elements and runs the XHR requests
 	 */
 	const parseElements = () => {
-		document.querySelectorAll("[data-include-fragment]").forEach(($el) => {
+		const $els = document.querySelectorAll("[data-include-fragment]");
+
+		for (let i = 0; i < $els.length; i++) {
+			const $el = $els[i];
+
 			if ($el.dataset.src) {
 				getData($el.dataset.src, $el);
 			}
-		});
+		}
 	};
 
 	/**

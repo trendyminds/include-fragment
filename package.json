@@ -2,9 +2,9 @@
   "name": "@trendyminds/include-fragment",
   "version": "1.0.0",
   "description": "A zero dependency utility to make an XHR request for HTML content",
-  "main": "index.js",
+  "main": "index.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "terser index.js -o index.min.js"
   },
   "author": "TrendyMinds",
   "license": "MIT",
@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/trendyminds/include-fragment#readme",
   "devDependencies": {
-    "prettier": "2.1.2"
+    "prettier": "2.1.2",
+    "terser": "^5.3.8"
   },
   "prettier": {
     "useTabs": true
