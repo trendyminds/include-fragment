@@ -1,0 +1,25 @@
+{
+  "name": "@trendyminds/include-fragment",
+  "version": "1.0.0",
+  "description": "A zero dependency utility to make an XHR request for HTML content",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "TrendyMinds",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trendyminds/include-fragment.git"
+  },
+  "bugs": {
+    "url": "https://github.com/trendyminds/include-fragment/issues"
+  },
+  "homepage": "https://github.com/trendyminds/include-fragment#readme",
+  "devDependencies": {
+    "prettier": "2.1.2"
+  },
+  "prettier": {
+    "useTabs": true
+  }
+}
