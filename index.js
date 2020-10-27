@@ -51,5 +51,31 @@
 		});
 	};
 
-	parseElements();
+	/**
+	 * Initialize the MutationObserver to:
+	 * 1. Fire our service on existing elements that contain [data-include-fragment]
+	 * 2. Fire our service on any dynamically added elements or dynamically inserted [data-src] attributes to DOM elements
+	 */
+	const observer = new MutationObserver((mutationsList) => {
+		for (const mutation of mutationsList) {
+			// Run each time we have a DOM mutation and if new [data-include-fragment] elements are added dynamically
+			if (mutation.type === "childList") {
+				parseElements();
+			}
+
+			// If some element dynamically received a new data-src attribute we need to parse those new elements and re-run the process
+			if (
+				mutation.type === "attributes" &&
+				mutation.attributeName === "data-src"
+			) {
+				parseElements();
+			}
+		}
+	});
+
+	observer.observe(document.body, {
+		attributes: true,
+		childList: true,
+		subtree: true,
+	});
 })();
