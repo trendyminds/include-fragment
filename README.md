@@ -8,10 +8,10 @@ This package is a fork/reconception of [GitHub's _fantastic_ Include Fragment El
 
 While Include Fragment Element is much more robust this:
 
-- 0️⃣ Has zero dependencies
-- 🚀 Is < 1kB (443 bytes gzipped)
-- 🌍 Does not require a custom elements polyfill
-- 🧙‍♂️ Still allows you to dynamically insert and defer fragments
+- 0️⃣  Has **zero dependencies**
+- 🚀  Is <1kB (**443 bytes gzipped**)
+- 🌍  Does not require a custom elements polyfill
+- 🧙‍♂️  Still allows you to dynamically insert and defer fragments
 
 ## ⚡️ Setup and use
 1. Install using `npm i @trendyminds/include-fragment`
